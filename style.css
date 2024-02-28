@@ -1,124 +1,72 @@
-:root {
-    --color-container: rgb(127, 134, 69);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-}
-
-.meu-body {
-    background: linear-gradient(to right, #7fbdf0, #015c80);
-    padding: 0;
+body{
     margin: 0;
-
+    padding: 0;
+    background-image: url(login1.webp);
+    background-repeat: no-repeat;
+    background-size: cover,contain;
+    background-attachment: fixed;
+    background-position: center;
+   
 }
 
-
-
-/* Navbar e botao on off para tema escuro e claro */
-
-.navBar {
-    background-color: white;
-    width: 100vw;
-    height: 6vh;
+.login{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    gap: 10px;
-
-
+    height: 100vh;
+  
 }
 
-.navBar a {
-
-
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.toggle {
-    position: absolute;
-    left: 80%;
-}
-
-.label-toggle {
-    display: inline-block;
-    z-index: 1;
-    height: 30px;
-    width: 70px;
-    background-color: yellowgreen;
-    border-radius: 50px;
-    position: relative;
-
-}
-
-.toggle-check {
-    display: none;
-}
-
-.label-toggle::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: aqua;
-    border-radius: 50px;
-    top: 5px;
-    left: 5px;
-    transition: 300ms;
-}
-
-.toggle-check:checked~.label-toggle {
-    background-color: #5b0889;
-}
-
-.toggle-check:checked~.label-toggle::before {
-    left: 45px;
-}
-
-
-/* Aba de login */
-
-
-.corpo-login {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-
-}
-
-.login {
+.escopo-login{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40%;
-    height: 94vh;
-    background-color: rgb(97, 46, 46);
-    box-shadow: 0 0 90px rgb(0, 0, 0);
-
-}
-
-.login input {
     border-radius: 50px;
-    border: none;
-    margin-bottom: 10px;
-    width: 30%;
-    height: 20px;
-    text-align: center;
+    border: solid  ;
+    width: 20vw;
+    height: 50vh;
+    backdrop-filter: blur(4px);
+    max-width: 100%;
 }
 
-.tit-login {
+.escopo-login input{
     position: relative;
-    top: -200px;
-    font-size: 4em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: -60px;
+    border-radius: 50px;
+    text-align: center;
+    border: none;
+    margin: 8px;
+    width: 60%;
+    height: 25px;
 }
 
-/* Texto de boas vindas */
-
-.boasVindas{
-    position: absolute;
-    top: 170px;
-    left: 150px;
-    font-size: 2em;
+.escopo-login button{
+    border-radius: 50px;
     text-align: center;
+    border: none;
+    margin: 8px;
+    width: 40%;
+    height: 25px;
+    transition: ease-out 300ms;
+}
+
+.escopo-login button:hover{
+    transition: all 300ms;
+    transform: scale(1.2);
+    background-color: rgb(100, 179, 100);
+}
+
+.escopo-login button:active{
+    transform: translate(px);
+    background-color:green ;
+}
+
+.tit-login{
+    font-size: 2.5em;
+    position: relative;
+    top: -100px;
+   font-family:  'poppins';
 }
