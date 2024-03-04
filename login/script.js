@@ -1,24 +1,50 @@
-addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
+    let usuario; 
+    let senha;
+
+    const nome = 'user';
+    const pass = '123';
     
-    //Botao on off para tema escuro ou claro
+    const form = document.querySelector('.login');
 
-    const checkboxToggle = document.getElementById('checkbox-toggle')
-    const labelToggle = document.querySelectorAll('.label-toggle')
-    document.body.classList.add('meu-body')
-    const meuBody = document.querySelector('.meu-body')
-    const navBar = this.document.querySelector('.navBar')
+    function validacao (){
 
-    checkboxToggle.addEventListener('change',function(){
-        if(checkboxToggle.checked){
-            meuBody.style.background= "#000000"; 
-            navBar.style.backgroundColor = '#000000';
-        } else {
-            meuBody.style.background = ""; 
-            navBar.style.backgroundColor = '';
+        if (usuario === nome && senha === pass){
+        console.log('entrou')
+        
+    }
+        else{
+            const p = document.createElement('p')
+            p.classList.add('msgError')
+            p.textContent = "Usuario ou senha incorretos."
+            form.appendChild(p)
+            
+            setTimeout(function(){
+                form.removeChild(p)
+            },4000)
         }
-    })
+
+    }
+
+
+    function prevenirEnvio(envio){
+        envio.preventDefault();
+        
+        usuario = document.getElementById('usuario').value; 
+
+       senha = document.getElementById('senha').value
+
+
+      
+       validacao();
+
+       document.getElementById('usuario').value = ""
+       document.getElementById('senha').value = ""
+    }
 
     
+    
 
-
+   
+    form.addEventListener('submit', prevenirEnvio)
 })
