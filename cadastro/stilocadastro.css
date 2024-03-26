@@ -24,15 +24,15 @@ body{
     border-radius: 50px;
     border: solid  ;
     width: 20vw;
-    height: 50vh;
+    height: 60%;
     backdrop-filter: blur(4px);
     max-width: 100%;
 }
 
-.escopo-cadastro input{
+.escopo-cadastro .inputsCad{
     position: relative;
     top: -40px;
-    border-radius: 50px;
+    border-radius: 50px;                
     text-align: center;
     border: none;
     margin: 8px;
@@ -60,7 +60,7 @@ body{
 }
 
 .escopo-cadastro button:active{
-    transform: translate(px);
+   
     background-color:green ;
 }
 
@@ -88,4 +88,26 @@ body{
     0 0 65px #ff00ff, /* Brilho da cor neon */
     0 0 75px #ff00ff, /* Brilho da cor neon */
     0 0 85px #ff00ff; /* Brilho da cor neon */
+}
+
+
+.escopo-cadastro.error .inputsCad{
+   border-color: red;
+}
+
+.escopo-cadastro .aErro{
+    position: absolute;
+    visibility: hidden;
+    top: -30%;
+    padding: 1%;
+    background: linear-gradient(90deg, rgb(207, 6, 6) 24%, rgb(203, 65, 65) 100%);  
+    border-radius: 50px;
+    
+
+
+}
+
+.escopo-cadastro.error .aErro{
+    visibility: visible;
+    color: rgb(3, 3, 3);
 }
